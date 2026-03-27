@@ -1,22 +1,190 @@
 {
   "flashcards": [
     {
-      "id": "1",
+      "id": "31531407-53fe-480c-a179-3e3e0eae372d",
       "category": "Rules",
       "front": "Rule 1: LAWS",
-      "back": "Every employee is expected to be familiar with and obey all public laws, company or departmental rules, instructions, specifications etc."
+      "back": "Every employee is expected to be familiar with and obey all public laws, company or departmental rules, instructions, specifications etc. covering or relating to their conduct as an agent of the company, or the work on which they are engaged. Lack of such knowledge will not serve to excuse any failure to observe them."
     },
     {
-      "id": "2",
+      "id": "3aca66ae-8db3-496c-952b-c85ba41cbb15",
       "category": "Rules",
       "front": "Rule 2: LOYALTY",
-      "back": "A steadfast loyalty to the companies interest is demanded from every employee."
+      "back": "A steadfast loyalty to the companies interest is demanded from every employee, in order that the company may faithfully perform the duties with which it is charged."
     },
     {
-      "id": "3",
+      "id": "d492e550-591a-448f-a466-189f37e9257b",
+      "category": "Rules",
+      "front": "Rule 3: HONESTY",
+      "back": "The company expects and requires absolute honesty from every employee in all dealings with the public, the company, and fellow employees."
+    },
+    {
+      "id": "5c2c9bbf-20ec-481b-a294-66d61e8e0401",
+      "category": "Rules",
+      "front": "Rule 4: EFFORT",
+      "back": "The company expects from each employee a maximum of efficient effort on every undertaking assigned to them."
+    },
+    {
+      "id": "8f7df9ad-5810-4c90-a247-ff26a45cb393",
+      "category": "Rules",
+      "front": "Rule 5: SERVICE",
+      "back": "Every employee must guard against unnecessary interruption or interference with the service."
+    },
+    {
+      "id": "5899ce60-c0a3-4195-bda2-06f6ba48616e",
+      "category": "Rules",
+      "front": "Rule 6: ORDER",
+      "back": "No employee may order, purchase, rent or in any manner acquire in the name of the company, or commit it to acquire, property, goods or services of any nature except as regularly or specifically authorized."
+    },
+    {
+      "id": "40844d42-9c75-4656-aaca-42b469b3f87a",
+      "category": "Rules",
+      "front": "Rule 7: PROPERTY",
+      "back": "No employee may loan, give, sell or destroy or otherwise dispose of the company's property, equipment, supplies or services except as regularly or specifically authorized and must disburse, use and account for such property etc. in exact accordance with his or her instructions."
+    },
+    {
+      "id": "274d9dbf-42cb-47b4-82fe-468bdba3e79a",
+      "category": "Rules",
+      "front": "Rule 8: RESPECT",
+      "back": "Employees as such must at all times respect the personal property, rights and privileges of other persons, and avoid any act, statement or neglect which may give offense or involve the company in controversies or litigation of any kind."
+    },
+    {
+      "id": "c1e7184f-5fae-4602-959c-7e5ee319d979",
+      "category": "Rules",
+      "front": "Rule 9: FUNDS",
+      "back": "Employees to whom are entrusted funds of the company will be held personally responsible to safeguard and disburse them in exact accordance with the instructions on this subject."
+    },
+    {
+      "id": "0587736d-e62b-4fa9-96ea-f07a5cce0d10",
       "category": "Rules",
       "front": "Rule 10: PREVENT INJURY",
-      "back": "Exercise every practicable precaution in performing work to aid and assist any employee or non-employee who may become injured."
+      "back": "To prevent injury to persons or property the company requires each employee to exercise every practicable precaution in performing his work, to report any condition or any practice, negligence or incompetence of others which endangers himself, the public or other workmen and to aid and assist any employee or non-employee who may become injured during the course of our work."
+    },
+    {
+      "id": "f4352b79-e9be-498d-ba5a-e9fe905b8f55",
+      "category": "Rules",
+      "front": "Rule 11: DRUGS",
+      "back": "The use of intoxicating beverages or drugs, engaging in games of chance, placing bets, bookmaking or other unlawful acts are not permitted on the company's premises at any time or elsewhere while on company business."
+    },
+    {
+      "id": "53231e5a-3f25-4e0f-80a6-536b1076bad8",
+      "category": "Rules",
+      "front": "Rule 12: BUILDING",
+      "back": "Additions to, removals from or changes in any respect of the specified or original design of building, equipment or other plant, is not permitted except as duly authorized and instructed."
+    },
+    {
+      "id": "96882e3c-7733-4543-9316-b2e158479faf",
+      "category": "Rules",
+      "front": "Rule 13: ENGAGE BUSINESS",
+      "back": "Employees shall not engage in business or act as employee or agent of any person or concern to the detriment directly or indirectly of the company's interest."
+    },
+    {
+      "id": "1cfcfb27-694c-451d-81e3-78c5f15f71ce",
+      "category": "Rules",
+      "front": "Rule 14: PR",
+      "back": "Making unauthorized statements in the public or press regarding company affairs is not permitted."
+    },
+    {
+      "id": "2f2b5489-f304-4386-a38e-b055d6db1eae",
+      "category": "Rules",
+      "front": "Rule 15: RECOMMENDATION EQUIPMENT",
+      "back": "As an agent of the company, employees shall not give recommendation or testimonial for any equipment, material or process except to the company."
+    },
+    {
+      "id": "f1464723-fa28-4942-a6b7-503c7b79d6f2",
+      "category": "Rules",
+      "front": "Rule 16: EXHIBIT RECORDS",
+      "back": "No employee shall exhibit company records, plans or correspondence, or convey the information contained therein to any person unless specifically authorized to do so."
+    },
+    {
+      "id": "0f22787d-3955-4a2a-85a5-5322705edc46",
+      "category": "Rules",
+      "front": "Rule 17: TESTIMONY",
+      "back": "Employee's shall not volunteer expert testimony without proper approval."
+    },
+    {
+      "id": "b550267f-5a30-4165-bbec-6006b800db98",
+      "category": "Rules",
+      "front": "Rule 18: TIMESHEETS",
+      "back": "No employee shall make, certify or approve any record, statement or report known by him to be false."
+    },
+    {
+      "id": "cef2586c-5181-4b92-8eb0-32b9a60eeda2",
+      "category": "Rules",
+      "front": "Rule 19: COMPANY MATERIALS",
+      "back": "No employee shall use the company's materials, vehicles, equipment or other property for personal purposes without permission."
+    },
+    {
+      "id": "17053e56-6316-430a-a9aa-ac87f7b04a56",
+      "category": "Rules",
+      "front": "Rule 20: PROPERTY SUBSCRIBER",
+      "back": "No employee shall use the property of a subscriber or other person or concern for company or personal purposes without permission."
+    },
+    {
+      "id": "0f1d0af4-5783-4818-bb1a-c295993845aa",
+      "category": "Rules",
+      "front": "Rule 21: ABSENT",
+      "back": "Employees must notify their respective supervisors at any time when it is necessary for them to be absent or tardy."
+    },
+    {
+      "id": "e0371ae9-a250-4bff-9a57-85b9829bd854",
+      "category": "Rules",
+      "front": "Rule 22: SOLICIT",
+      "back": "No employee shall solicit subscriptions among employees during working hours without permission."
+    },
+    {
+      "id": "ab911212-9985-442e-ad98-dce6728daf2d",
+      "category": "Rules",
+      "front": "Rule 23: EXPLOSIVES",
+      "back": "Unnecessarily bringing or permitting explosives or combustibles in or near to the company's buildings or premises is not permitted."
+    },
+    {
+      "id": "6c9490e4-01e3-405f-9277-a1dbbe28a05f",
+      "category": "Rules",
+      "front": "Rule 24: SMOKING",
+      "back": "Smoking is not allowed in any company owned or leased property at any time."
+    },
+    {
+      "id": "48f8b7a6-dca6-45c3-86b1-227956134dbd",
+      "category": "Rules",
+      "front": "Rule 25: COMPANY NAME",
+      "back": "No employee shall use the company's name or account to purchase goods for personal use."
+    },
+    {
+      "id": "10955fe4-1ec8-48ca-8004-0457092ca14d",
+      "category": "Rules",
+      "front": "Rule 26: PERMISSION TO PURCHASE",
+      "back": "Employees shall not, without permission, purchase directly, any supplies or equipment which should be obtained on requisition."
+    },
+    {
+      "id": "c589b6cf-7610-4277-a654-ad0a60ea0414",
+      "category": "Rules",
+      "front": "Rule 27: NON-STANDARD EQUIPMENT",
+      "back": "No employee shall except from agents or others, non-standard equipment, tools or materials for trial or demonstration."
+    },
+    {
+      "id": "3fa9d1a0-b5d7-4e2b-b5c3-e2474254b010",
+      "category": "Rules",
+      "front": "Rule 28: LOAN BADGES",
+      "back": "Employees are not permitted to loan badges, books, tools or property of the company."
+    },
+    {
+      "id": "11971436-d9d7-4a49-a626-dff5926fca31",
+      "category": "Rules",
+      "front": "Rule 29: ASSIGN WAGES",
+      "back": "Employees may not assign their wages or otherwise involve the company in their personal affairs."
+    },
+    {
+      "id": "e737a62e-3164-4ce0-a498-66993a64b374",
+      "category": "Rules",
+      "front": "Rule 30: DAMAGE",
+      "back": "Employees shall report promptly and in accordance with instructions, any accidental damage they may have caused or which has come to their attention."
+    },
+    {
+      "id": "7c79a168-d88f-4573-b3f8-32f5c34459c9",
+      "category": "Rules",
+      "front": "Rule 31: TRIM",
+      "back": "Permission to work on private property or to trim or cut trees on the highway or elsewhere should be obtained before such work is started."
     },
     {
       "id": "4",
@@ -77,18 +245,6 @@
       "category": "Hazardous Gases",
       "front": "What are the gases listed under the acronym `Pagan hammer bc`?",
       "back": "Propane, Acetelyne, Gasoline, Alcohol, Natural gas, Hydrogen, Ammonia, Mapp gas, Methane, Ethelene, Refrigerants, Butane, Carbon Monoxide."
-    },
-    {
-      "id": "14",
-      "category": "Rules",
-      "front": "Rule 18: TIMESHEETS",
-      "back": "No employee shall make, certify or approve any record, statement or report known by him to be false."
-    },
-    {
-      "id": "15",
-      "category": "Rules",
-      "front": "Rule 24: SMOKING",
-      "back": "Smoking is not allowed in any company owned or leased property at any time."
     },
     {
       "id": "16",
