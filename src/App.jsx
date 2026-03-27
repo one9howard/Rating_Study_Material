@@ -136,18 +136,38 @@ function ClozeTests() {
       </form>
 
       {status === 'idle' && (
-        <button className="btn-control btn-primary" onClick={checkAnswer}>Check Answer</button>
+        <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem' }}>
+          <button className="btn-control btn-primary" onClick={checkAnswer}>Check Answer</button>
+          <button className="btn-control" onClick={() => setStatus('revealed')}>Show Answer</button>
+          <button className="btn-control" onClick={nextTest}>Skip to Next</button>
+        </div>
       )}
 
       {status === 'correct' && (
-        <>
+        <div style={{ textAlign: 'center', marginTop: '1rem' }}>
           <div className="feedback success">Excellent! Memory retained.</div>
           <button className="btn-control btn-primary" style={{ marginTop: '1rem' }} onClick={nextTest}>Next Challenge</button>
-        </>
+        </div>
       )}
 
       {status === 'incorrect' && (
-        <div className="feedback error">Incorrect. Think back to the rules...</div>
+        <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+          <div className="feedback error">Incorrect. Think back to the rules...</div>
+          <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem', justifyContent: 'center' }}>
+            <button className="btn-control" onClick={() => setStatus('idle')}>Try Again</button>
+            <button className="btn-control" onClick={() => setStatus('revealed')}>Show Answer</button>
+            <button className="btn-control" onClick={nextTest}>Skip</button>
+          </div>
+        </div>
+      )}
+
+      {status === 'revealed' && (
+        <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+          <div className="feedback" style={{ color: 'var(--accent-color)' }}>
+            The exact answer is: <strong>{current.answer}</strong>
+          </div>
+          <button className="btn-control btn-primary" style={{ marginTop: '1rem' }} onClick={nextTest}>Next Challenge</button>
+        </div>
       )}
     </div>
   );
