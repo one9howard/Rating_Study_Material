@@ -1,26 +1,27 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import './index.css';
 import db from './data/content.json';
 
-// Utility for SRS dates
-const getTomorrow = () => new Date(Date.now() + 86400000).toISOString();
-
 export default function App() {
-  const [tab, setTab] = useState('dashboard');
+  const [tab, setTab] = useState('flashcards');
   const [search, setSearch] = useState('');
 
   // Extract unique categories
   const categories = useMemo(() => ["All", ...new Set(db.flashcards.map(c => c.category))], []);
 
+  const handleNav = (targetTab) => {
+    setTab(targetTab);
+    setSearch('');
+  };
+
   return (
     <>
       <div className="sidebar">
-        <div className="logo">Safety<br/>Mastery<br/>Platform</div>
-        <button className={`nav-link ${tab==='dashboard'?'active':''}`} onClick={()=>setTab('dashboard')}>Dashboard</button>
-        <button className={`nav-link ${tab==='flashcards'?'active':''}`} onClick={()=>setTab('flashcards')}>SRS Flashcards</button>
-        <button className={`nav-link ${tab==='cloze'?'active':''}`} onClick={()=>setTab('cloze')}>Knowledge Checks</button>
-        <button className={`nav-link ${tab==='rhythm'?'active':''}`} onClick={()=>setTab('rhythm')}>Rhythm Match</button>
-        <button className={`nav-link ${tab==='diagrams'?'active':''}`} onClick={()=>setTab('diagrams')}>Blueprint Library</button>
+        <div className="logo">Rating<br/>Study<br/>Guide</div>
+        <button className={`nav-link ${tab==='flashcards'&&!search?'active':''}`} onClick={()=>handleNav('flashcards')}>Flashcards</button>
+        <button className={`nav-link ${tab==='cloze'&&!search?'active':''}`} onClick={()=>handleNav('cloze')}>Knowledge Checks</button>
+        <button className={`nav-link ${tab==='rhythm'&&!search?'active':''}`} onClick={()=>handleNav('rhythm')}>Rhythm Match</button>
+        <button className={`nav-link ${tab==='diagrams'&&!search?'active':''}`} onClick={()=>handleNav('diagrams')}>Blueprint Library</button>
       </div>
 
       <div className="main-content">
@@ -39,7 +40,6 @@ export default function App() {
             <Glossary search={search} />
           ) : (
             <>
-              {tab === 'dashboard' && <Dashboard />}
               {tab === 'flashcards' && <FlashcardsView categories={categories} />}
               {tab === 'cloze' && <ClozeView />}
               {tab === 'rhythm' && <RhythmGame />}
@@ -74,64 +74,29 @@ function Glossary({ search }) {
   );
 }
 
-function Dashboard() {
-  const [stats, setStats] = useState({ cardsLearned: 0, streak: 1 });
-  useEffect(() => {
-    const srs = JSON.parse(localStorage.getItem('srs_data') || '{}');
-    setStats({ cardsLearned: Object.keys(srs).length, streak: 1 });
-  }, []);
-
-  return (
-    <div>
-      <h2 style={{marginBottom: '2rem'}}>Overview</h2>
-      <div className="stat-grid">
-        <div className="stat-card">
-          <div className="stat-value">{stats.cardsLearned}</div>
-          <div className="stat-label">Cards Memorized</div>
-        </div>
-        <div className="stat-card">
-          <div className="stat-value">{db.flashcards.length}</div>
-          <div className="stat-label">Total In Database</div>
-        </div>
-        <div className="stat-card">
-          <div className="stat-value">{stats.streak}</div>
-          <div className="stat-label">Day Streak</div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function FlashcardsView({ categories }) {
   const [cat, setCat] = useState('All');
   const [idx, setIdx] = useState(0);
   const [flipped, setFlipped] = useState(false);
-  const [srsHistory, setSrsHistory] = useState(() => JSON.parse(localStorage.getItem('srs_data') || '{}'));
 
-  // Logic to only show cards that are due or in the selected category
   const activeCards = useMemo(() => {
-    let pool = cat === 'All' ? db.flashcards : db.flashcards.filter(c => c.category === cat);
-    // Sort so cards NOT in srsHistory come first, followed by due cards
-    return pool.sort((a,b) => {
-      let dA = srsHistory[a.id] ? new Date(srsHistory[a.id]).getTime() : 0;
-      let dB = srsHistory[b.id] ? new Date(srsHistory[b.id]).getTime() : 0;
-      return dA - dB;
-    });
-  }, [cat, srsHistory]);
+    return cat === 'All' ? db.flashcards : db.flashcards.filter(c => c.category === cat);
+  }, [cat]);
 
   const current = activeCards[idx];
 
-  const handleSRS = (quality) => {
-    const newHistory = { ...srsHistory };
-    if (quality === 'hard') newHistory[current.id] = new Date().toISOString(); // review immediately
-    if (quality === 'good') newHistory[current.id] = getTomorrow();
-    if (quality === 'easy') newHistory[current.id] = new Date(Date.now() + 86400000*3).toISOString(); // 3 days
-    
-    setSrsHistory(newHistory);
-    localStorage.setItem('srs_data', JSON.stringify(newHistory));
-    
+  const nextCard = () => {
     setFlipped(false);
-    setTimeout(() => setIdx((prev) => (prev + 1) % activeCards.length), 200);
+    setTimeout(() => {
+      setIdx((prev) => (prev + 1) % activeCards.length);
+    }, 150);
+  };
+
+  const prevCard = () => {
+    setFlipped(false);
+    setTimeout(() => {
+      setIdx((prev) => (prev === 0 ? activeCards.length - 1 : prev - 1));
+    }, 150);
   };
 
   if(!current) return <div>No cards available in this deck.</div>;
@@ -139,7 +104,7 @@ function FlashcardsView({ categories }) {
   return (
     <div>
       <div className="deck-controls">
-        <h2 style={{margin: 0}}>SRS Study Mode</h2>
+        <h2 style={{margin: 0}}>Study Mode</h2>
         <select className="select-clean" value={cat} onChange={e => {setCat(e.target.value); setIdx(0); setFlipped(false);}}>
           {categories.map(c => <option key={c} value={c}>{c}</option>)}
         </select>
@@ -158,13 +123,11 @@ function FlashcardsView({ categories }) {
         </div>
       </div>
 
-      {flipped && (
-        <div className="srs-controls">
-          <button className="btn-control btn-danger" onClick={(e) => {e.stopPropagation(); handleSRS('hard');}}>Hard (Again)</button>
-          <button className="btn-control btn-warning" onClick={(e) => {e.stopPropagation(); handleSRS('good');}}>Good (1d)</button>
-          <button className="btn-control btn-success" onClick={(e) => {e.stopPropagation(); handleSRS('easy');}}>Easy (3d)</button>
-        </div>
-      )}
+      <div className="srs-controls">
+        <button className="btn-control" onClick={(e) => {e.stopPropagation(); prevCard();}}>Previous</button>
+        <span style={{ alignSelf: 'center', opacity: 0.6, padding: '0 1rem' }}>{idx + 1} / {activeCards.length}</span>
+        <button className="btn-control btn-primary" onClick={(e) => {e.stopPropagation(); nextCard();}}>Next</button>
+      </div>
     </div>
   );
 }
