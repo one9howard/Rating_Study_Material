@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import './index.css';
 import db from './data/content.json';
 
@@ -21,6 +21,7 @@ export default function App() {
         <button className={`nav-link ${tab==='flashcards'&&!search?'active':''}`} onClick={()=>handleNav('flashcards')}>Flashcards</button>
         <button className={`nav-link ${tab==='cloze'&&!search?'active':''}`} onClick={()=>handleNav('cloze')}>Knowledge Checks</button>
         <button className={`nav-link ${tab==='rhythm'&&!search?'active':''}`} onClick={()=>handleNav('rhythm')}>Rhythm Match</button>
+        <button className={`nav-link ${tab==='karaoke'&&!search?'active':''}`} onClick={()=>handleNav('karaoke')}>Rules Karaoke</button>
         <button className={`nav-link ${tab==='diagrams'&&!search?'active':''}`} onClick={()=>handleNav('diagrams')}>Blueprint Library</button>
       </div>
 
@@ -35,7 +36,7 @@ export default function App() {
           />
         </div>
 
-        <div className="glass-panel" style={(tab === 'diagrams' || search) ? {maxWidth: '1200px', padding: '1.5rem'} : {}}>
+        <div className="glass-panel" style={(tab === 'diagrams' || tab === 'karaoke' || search) ? {maxWidth: '1200px', padding: '1.5rem'} : {}}>
           {search ? (
             <Glossary search={search} />
           ) : (
@@ -43,12 +44,99 @@ export default function App() {
               {tab === 'flashcards' && <FlashcardsView categories={categories} />}
               {tab === 'cloze' && <ClozeView />}
               {tab === 'rhythm' && <RhythmGame />}
+              {tab === 'karaoke' && <RulesKaraoke />}
               {tab === 'diagrams' && <DiagramLibrary />}
             </>
           )}
         </div>
       </div>
     </>
+  );
+}
+
+const KARAOKE_VIDEO = '/media/Rules_Karaoke_V2_Bouncing_Ball_Recall.mp4';
+const KARAOKE_PROGRESS_KEY = 'rating-study-rules-karaoke-position';
+
+function RulesKaraoke() {
+  const videoRef = useRef(null);
+  const [playbackRate, setPlaybackRate] = useState(1);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return undefined;
+
+    const savedPosition = Number.parseFloat(localStorage.getItem(KARAOKE_PROGRESS_KEY) || '0');
+    const restorePosition = () => {
+      if (Number.isFinite(savedPosition) && savedPosition > 0 && savedPosition < video.duration - 5) {
+        video.currentTime = savedPosition;
+      }
+    };
+    const savePosition = () => localStorage.setItem(KARAOKE_PROGRESS_KEY, String(video.currentTime));
+    const clearPosition = () => localStorage.removeItem(KARAOKE_PROGRESS_KEY);
+
+    video.addEventListener('loadedmetadata', restorePosition, { once: true });
+    video.addEventListener('timeupdate', savePosition);
+    video.addEventListener('pause', savePosition);
+    video.addEventListener('ended', clearPosition);
+
+    return () => {
+      video.removeEventListener('timeupdate', savePosition);
+      video.removeEventListener('pause', savePosition);
+      video.removeEventListener('ended', clearPosition);
+      savePosition();
+    };
+  }, []);
+
+  const jumpTo = (seconds) => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.currentTime = seconds;
+    video.play().catch(() => {});
+  };
+
+  const changeSpeed = (rate) => {
+    setPlaybackRate(rate);
+    if (videoRef.current) videoRef.current.playbackRate = rate;
+  };
+
+  return (
+    <section className="karaoke-view">
+      <div className="karaoke-heading">
+        <div>
+          <span className="category-tag karaoke-tag">Rules 1–31</span>
+          <h2>Rules Karaoke</h2>
+          <p>Follow the bouncing ball, then use each four-second pause to recall the rule before continuing.</p>
+        </div>
+        <a className="btn-control karaoke-download" href={KARAOKE_VIDEO} download>Download video</a>
+      </div>
+
+      <div className="video-shell">
+        <video ref={videoRef} className="karaoke-video" controls playsInline preload="metadata">
+          <source src={KARAOKE_VIDEO} type="video/mp4" />
+          Your browser does not support MP4 video playback.
+        </video>
+      </div>
+
+      <div className="karaoke-controls" aria-label="Video study controls">
+        <div className="control-group">
+          <span className="control-label">Jump to</span>
+          <button className="btn-control" onClick={() => jumpTo(0)}>Rules 1–10</button>
+          <button className="btn-control" onClick={() => jumpTo(205.824)}>Rules 11–20</button>
+          <button className="btn-control" onClick={() => jumpTo(371.683)}>Rules 21–31</button>
+        </div>
+        <div className="control-group">
+          <span className="control-label">Speed</span>
+          {[0.75, 1, 1.25, 1.5].map(rate => (
+            <button key={rate} className={`btn-control ${playbackRate === rate ? 'btn-primary' : ''}`} onClick={() => changeSpeed(rate)} aria-pressed={playbackRate === rate}>
+              {rate}×
+            </button>
+          ))}
+        </div>
+        <button className="btn-control btn-danger restart-button" onClick={() => jumpTo(0)}>Restart video</button>
+      </div>
+
+      <p className="resume-note">Your position is saved automatically on this device.</p>
+    </section>
   );
 }
 

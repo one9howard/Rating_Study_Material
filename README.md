@@ -1,16 +1,24 @@
-# React + Vite
+# Rating Study Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React/Vite study application containing flashcards, knowledge checks, rhythm matching, technical diagrams, and a Rules Karaoke video for Rules 1–31.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+## Production build
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm ci
+npm run build
+npm run start
+```
 
-## Expanding the ESLint configuration
+The `start` command uses Railway's `PORT` environment variable. The Rules Karaoke video is served from `public/media/` and is included in production builds.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Rules Karaoke
+
+The player supports mobile-friendly inline playback, full-screen browser controls, exact section jumps, playback-speed controls, downloading, and automatic resume-position storage on the current device.
