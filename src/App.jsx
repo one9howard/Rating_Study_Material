@@ -6,7 +6,7 @@ export default function App() {
       <iframe
         className="study-app-frame"
         src="/study/index.html"
-        title="Splice Tech Challenge Control"
+        title="Tech Challenge Control"
       />
     </main>
   );
