@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#071b2d" />
+  <title>DASHBOARD</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">Splice Tech <span>Dashboard</span></a>
+    <div class="topbar-actions"><span id="streak">0 missions mastered</span><button class="quiet-button"
+        id="resetProgress">Reset progress</button></div>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">RATING STUDY SUPPORT</p>
+      <h1>Learn it. Build it. Draw it from memory.</h1>
+      <p>Practice the exact recall your exam may require: rack layouts, card identification, air-pressure routes, and
+        load-coil decisions.</p>
+    </section>
+
+    <nav class="challenge-nav" aria-label="Study modes">
+      <button class="nav-card active" data-view="dashboard"><b>Today's challenge</b><span>Target weak
+          skills</span></button>
+      <button class="nav-card" data-view="library"><b>Study library</b><span>All safety and rules</span></button>
+      <button class="nav-card" data-view="flashcards"><b>Flashcards</b><span>94 questions</span></button>
+      <button class="nav-card" data-view="slc"><b>SLC rack builder</b><span>Shelves and cards</span></button>
+      <button class="nav-card" data-view="air"><b>Air route builder</b><span>Transducers and manifolds</span></button>
+      <button class="nav-card" data-view="loading"><b>Load-coil planner</b><span>Placement logic</span></button>
+      <button class="nav-card" data-view="draw"><b>Blank-paper drill</b><span>Draw under time</span></button>
+    </nav>
+
+    <section id="dashboard" class="view active">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">START HERE</p>
+          <h2>One focused challenge at a time</h2>
+        </div><span class="pill">Source-backed</span>
+      </div>
+      <div class="challenge-grid">
+        <article class="challenge-card"><span class="challenge-number">01</span>
+          <h3>Learn the whole library</h3>
+          <p>Browse the rules, safety topics, equipment references, and every supplied study PDF.</p><button
+            class="primary-button" data-go="library">Open study library</button>
+        </article>
+        <article class="challenge-card"><span class="challenge-number">02</span>
+          <h3>Recall 94 study facts</h3>
+          <p>Work through the existing safety, systems, equipment, and rules flashcards.</p><button
+            class="primary-button" data-go="flashcards">Start flashcards</button>
+        </article>
+        <article class="challenge-card"><span class="challenge-number">03</span>
+          <h3>Build diagrams from memory</h3>
+          <p>Use the reconstruction drills once you know the individual parts.</p><button class="primary-button"
+            data-go="slc">Start diagram drills</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="library" class="view">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">COMPLETE COURSE MAP</p>
+          <h2>Safety, rules, equipment, and systems</h2>
+          <p>Everything below came from your supplied study pack. Choose a topic to study facts, then open the original
+            reference when you need the full page.</p>
+        </div><span class="pill" id="libraryCount">Loading sources</span>
+      </div>
+      <div id="topicMap" class="topic-map"></div>
+      <div class="library-toolbar"><label>Find a source <input id="sourceSearch" type="search"
+            placeholder="e.g. gloves, SLC, air, voltage" /></label><button class="reference-button"
+          id="openRulesTranscript">Read all 31 rules</button><button class="reference-button" id="openKaraoke">Play
+          rules karaoke</button></div>
+      <div id="sourceLibrary" class="source-library"></div>
+    </section>
+
+    <section id="flashcards" class="view">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ACTIVE RECALL</p>
+          <h2>Full study-card deck</h2>
+          <p>Start with a category or work through every card. Tap the card to reveal the answer.</p>
+        </div><span class="pill" id="deckCount">94 cards</span>
+      </div>
+      <div class="flash-controls"><label>Category <select id="cardCategory"></select></label><label>Search <input
+            id="cardSearch" type="search" placeholder="Find a topic" /></label><button class="quiet-button"
+          id="shuffleCards">Shuffle</button></div>
+      <div id="studyCard" class="study-card" role="button" tabindex="0"
+        aria-label="Study card. Press enter or click to reveal answer."><span id="cardCategoryLabel"></span>
+        <h3 id="cardFront"></h3>
+        <p id="cardHint">Click to reveal the answer</p>
+        <div id="cardBack" class="card-back"></div>
+      </div>
+      <div class="study-card-actions"><button class="quiet-button" id="previousCard">Previous</button><span
+          id="cardPosition"></span><button class="quiet-button" id="revealCard">Reveal</button><button
+          class="primary-button" id="masterCard">I knew it</button><button class="quiet-button"
+          id="nextCard">Next</button></div>
+      <div class="knowledge-check">
+        <p class="eyebrow">BONUS KNOWLEDGE CHECK</p>
+        <p id="clozePrompt"></p><input id="clozeAnswer" type="text" placeholder="Type the missing answer" /><button
+          class="quiet-button" id="checkCloze">Check</button>
+        <p class="feedback" id="clozeFeedback" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="slc" class="view">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">RECONSTRUCTION DRILL</p>
+          <h2>SLC-96 rack builder</h2>
+          <p>Choose a mode, then click a card and the rack position where it belongs.</p>
+        </div><button class="reference-button" data-reference="slc">View source diagram</button>
+      </div>
+      <div class="mode-picker" role="group" aria-label="SLC mode"><button data-mode="2" class="mode-button active">Mode
+          2</button><button data-mode="3" class="mode-button">Mode 3</button></div>
+      <div class="builder-layout">
+        <aside class="card-bank" aria-label="Available SLC cards">
+          <h3>Card bank</h3>
+          <p id="cardInstruction">Select a card to place it.</p>
+          <div id="slcCards" class="token-list"></div><button class="quiet-button" id="clearRack">Clear rack</button>
+        </aside>
+        <div>
+          <div id="slcRack" class="rack" aria-label="SLC rack layout"></div>
+          <div class="rack-notes" id="rackNotes"></div><button class="primary-button" id="checkRack">Check rack</button>
+          <p class="feedback" id="rackFeedback" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="air" class="view">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ROUTE RECALL</p>
+          <h2>Air-pressure route builder</h2>
+          <p>Place the selected marker at the correct distance from the C/O.</p>
+        </div><button class="reference-button" data-reference="air">View source diagram</button>
+      </div>
+      <div class="route-workspace">
+        <div class="route-tools">
+          <h3>Marker bank</h3>
+          <div id="routeTokens" class="token-list"></div><button class="quiet-button" id="clearRoute">Clear
+            route</button>
+          <p>Key: T = transducer; M = manifold; FT = flow transducer.</p>
+        </div>
+        <div>
+          <div id="route" class="route" aria-label="Air route">
+            <div class="co">C/O</div>
+            <div class="route-line"></div>
+            <div class="distance-labels"><span>3,000 ft</span><span>6,000 ft</span><span>9,000 ft</span><span>12,000
+                ft</span><span>End</span></div>
+            <div id="routeSlots" class="route-slots"></div>
+          </div><button class="primary-button" id="checkRoute">Check route</button>
+          <p class="feedback" id="routeFeedback" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="loading" class="view">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">DECISION DRILL</p>
+          <h2>Load-coil planner</h2>
+          <p>Turn the notes into a placement decision.</p>
+        </div><button class="reference-button" data-reference="loading">View source diagram</button>
+      </div>
+      <article class="question-card">
+        <p class="scenario-label">Scenario</p>
+        <h3>A copper loop is 24,000 ft long. Which plan matches the source notes?</h3>
+        <div id="loadChoices" class="choice-list"></div>
+        <p class="feedback" id="loadFeedback" aria-live="polite"></p><button class="quiet-button"
+          id="newLoadingQuestion">New scenario</button>
+      </article>
+      <div class="fact-strip"><span>Use on loop lengths over <b>18,000 ft</b></span><span>First placement <b>3,000 ft
+            from C/O</b></span><span>Then every <b>6,000 ft</b></span><span>Within <b>9,000 ft</b> of subscriber</span>
+      </div>
+    </section>
+
+    <section id="draw" class="view">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EXAM SIMULATION</p>
+          <h2>Blank-paper drill</h2>
+          <p>Draw first. Check the required labels second. Reveal the reference last.</p>
+        </div><button class="reference-button" data-reference="current">Reveal reference</button>
+      </div>
+      <div class="draw-controls"><label>Prompt <select id="drawPrompt">
+            <option value="slc_96_mode2.pdf">SLC-96 Mode 2 rack</option>
+            <option value="slc_96_mode3.pdf">SLC-96 Mode 3 rack</option>
+            <option value="air-pressure.pdf">Air-pressure route</option>
+            <option value="loading.pdf">Load-coil placement</option>
+            <option value="rda-monitoring-system.pdf">RDA monitoring system</option>
+          </select></label><label>Minutes <select id="timerMinutes">
+            <option value="3">3</option>
+            <option value="5" selected>5</option>
+            <option value="8">8</option>
+          </select></label><button class="primary-button" id="startTimer">Start timer</button><strong id="timer"
+          aria-live="polite">05:00</strong></div>
+      <div class="canvas-shell"><canvas id="drawingCanvas" width="1200" height="700"
+          aria-label="Drawing canvas"></canvas></div>
+      <div class="canvas-actions"><button class="quiet-button" id="undoStroke">Undo stroke</button><button
+          class="quiet-button" id="clearCanvas">Clear canvas</button><span>Tip: say each component aloud as you draw
+          it.</span></div>
+    </section>
+  </main>
+  <dialog id="referenceDialog">
+    <div class="dialog-heading">
+      <h2 id="referenceTitle">Reference diagram</h2><button class="quiet-button" id="closeReference">Close</button>
+    </div><iframe id="referenceFrame" title="Study reference diagram"></iframe>
+  </dialog>
+  <script src="study-data.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

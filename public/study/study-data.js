@@ -1,0 +1,824 @@
+window.SPLICE_STUDY_DATA = {
+  "flashcards": [
+    {
+      "id": "31531407-53fe-480c-a179-3e3e0eae372d",
+      "category": "Rules",
+      "front": "Rule 1: LAWS",
+      "back": "Every employee is expected to be familiar with and obey all public laws, company or departmental rules, instructions, specifications etc. covering or relating to their conduct as an agent of the company, or the work on which they are engaged. Lack of such knowledge will not serve to excuse any failure to observe them."
+    },
+    {
+      "id": "3aca66ae-8db3-496c-952b-c85ba41cbb15",
+      "category": "Rules",
+      "front": "Rule 2: LOYALTY",
+      "back": "A steadfast loyalty to the companies interest is demanded from every employee, in order that the company may faithfully perform the duties with which it is charged."
+    },
+    {
+      "id": "d492e550-591a-448f-a466-189f37e9257b",
+      "category": "Rules",
+      "front": "Rule 3: HONESTY",
+      "back": "The company expects and requires absolute honesty from every employee in all dealings with the public, the company, and fellow employees."
+    },
+    {
+      "id": "5c2c9bbf-20ec-481b-a294-66d61e8e0401",
+      "category": "Rules",
+      "front": "Rule 4: EFFORT",
+      "back": "The company expects from each employee a maximum of efficient effort on every undertaking assigned to them."
+    },
+    {
+      "id": "8f7df9ad-5810-4c90-a247-ff26a45cb393",
+      "category": "Rules",
+      "front": "Rule 5: SERVICE",
+      "back": "Every employee must guard against unnecessary interruption or interference with the service."
+    },
+    {
+      "id": "5899ce60-c0a3-4195-bda2-06f6ba48616e",
+      "category": "Rules",
+      "front": "Rule 6: ORDER",
+      "back": "No employee may order, purchase, rent or in any manner acquire in the name of the company, or commit it to acquire, property, goods or services of any nature except as regularly or specifically authorized."
+    },
+    {
+      "id": "40844d42-9c75-4656-aaca-42b469b3f87a",
+      "category": "Rules",
+      "front": "Rule 7: PROPERTY",
+      "back": "No employee may loan, give, sell or destroy or otherwise dispose of the company's property, equipment, supplies or services except as regularly or specifically authorized and must disburse, use and account for such property etc. in exact accordance with his or her instructions."
+    },
+    {
+      "id": "274d9dbf-42cb-47b4-82fe-468bdba3e79a",
+      "category": "Rules",
+      "front": "Rule 8: RESPECT",
+      "back": "Employees as such must at all times respect the personal property, rights and privileges of other persons, and avoid any act, statement or neglect which may give offense or involve the company in controversies or litigation of any kind."
+    },
+    {
+      "id": "c1e7184f-5fae-4602-959c-7e5ee319d979",
+      "category": "Rules",
+      "front": "Rule 9: FUNDS",
+      "back": "Employees to whom are entrusted funds of the company will be held personally responsible to safeguard and disburse them in exact accordance with the instructions on this subject."
+    },
+    {
+      "id": "0587736d-e62b-4fa9-96ea-f07a5cce0d10",
+      "category": "Rules",
+      "front": "Rule 10: PREVENT INJURY",
+      "back": "To prevent injury to persons or property the company requires each employee to exercise every practicable precaution in performing his work, to report any condition or any practice, negligence or incompetence of others which endangers himself, the public or other workmen and to aid and assist any employee or non-employee who may become injured during the course of our work."
+    },
+    {
+      "id": "f4352b79-e9be-498d-ba5a-e9fe905b8f55",
+      "category": "Rules",
+      "front": "Rule 11: DRUGS",
+      "back": "The use of intoxicating beverages or drugs, engaging in games of chance, placing bets, bookmaking or other unlawful acts are not permitted on the company's premises at any time or elsewhere while on company business."
+    },
+    {
+      "id": "53231e5a-3f25-4e0f-80a6-536b1076bad8",
+      "category": "Rules",
+      "front": "Rule 12: BUILDING",
+      "back": "Additions to, removals from or changes in any respect of the specified or original design of building, equipment or other plant, is not permitted except as duly authorized and instructed."
+    },
+    {
+      "id": "96882e3c-7733-4543-9316-b2e158479faf",
+      "category": "Rules",
+      "front": "Rule 13: ENGAGE BUSINESS",
+      "back": "Employees shall not engage in business or act as employee or agent of any person or concern to the detriment directly or indirectly of the company's interest."
+    },
+    {
+      "id": "1cfcfb27-694c-451d-81e3-78c5f15f71ce",
+      "category": "Rules",
+      "front": "Rule 14: PR",
+      "back": "Making unauthorized statements in the public or press regarding company affairs is not permitted."
+    },
+    {
+      "id": "2f2b5489-f304-4386-a38e-b055d6db1eae",
+      "category": "Rules",
+      "front": "Rule 15: RECOMMENDATION EQUIPMENT",
+      "back": "As an agent of the company, employees shall not give recommendation or testimonial for any equipment, material or process except to the company."
+    },
+    {
+      "id": "f1464723-fa28-4942-a6b7-503c7b79d6f2",
+      "category": "Rules",
+      "front": "Rule 16: EXHIBIT RECORDS",
+      "back": "No employee shall exhibit company records, plans or correspondence, or convey the information contained therein to any person unless specifically authorized to do so."
+    },
+    {
+      "id": "0f22787d-3955-4a2a-85a5-5322705edc46",
+      "category": "Rules",
+      "front": "Rule 17: TESTIMONY",
+      "back": "Employee's shall not volunteer expert testimony without proper approval."
+    },
+    {
+      "id": "b550267f-5a30-4165-bbec-6006b800db98",
+      "category": "Rules",
+      "front": "Rule 18: TIMESHEETS",
+      "back": "No employee shall make, certify or approve any record, statement or report known by him to be false."
+    },
+    {
+      "id": "cef2586c-5181-4b92-8eb0-32b9a60eeda2",
+      "category": "Rules",
+      "front": "Rule 19: COMPANY MATERIALS",
+      "back": "No employee shall use the company's materials, vehicles, equipment or other property for personal purposes without permission."
+    },
+    {
+      "id": "17053e56-6316-430a-a9aa-ac87f7b04a56",
+      "category": "Rules",
+      "front": "Rule 20: PROPERTY SUBSCRIBER",
+      "back": "No employee shall use the property of a subscriber or other person or concern for company or personal purposes without permission."
+    },
+    {
+      "id": "0f1d0af4-5783-4818-bb1a-c295993845aa",
+      "category": "Rules",
+      "front": "Rule 21: ABSENT",
+      "back": "Employees must notify their respective supervisors at any time when it is necessary for them to be absent or tardy."
+    },
+    {
+      "id": "e0371ae9-a250-4bff-9a57-85b9829bd854",
+      "category": "Rules",
+      "front": "Rule 22: SOLICIT",
+      "back": "No employee shall solicit subscriptions among employees during working hours without permission."
+    },
+    {
+      "id": "ab911212-9985-442e-ad98-dce6728daf2d",
+      "category": "Rules",
+      "front": "Rule 23: EXPLOSIVES",
+      "back": "Unnecessarily bringing or permitting explosives or combustibles in or near to the company's buildings or premises is not permitted."
+    },
+    {
+      "id": "6c9490e4-01e3-405f-9277-a1dbbe28a05f",
+      "category": "Rules",
+      "front": "Rule 24: SMOKING",
+      "back": "Smoking is not allowed in any company owned or leased property at any time."
+    },
+    {
+      "id": "48f8b7a6-dca6-45c3-86b1-227956134dbd",
+      "category": "Rules",
+      "front": "Rule 25: COMPANY NAME",
+      "back": "No employee shall use the company's name or account to purchase goods for personal use."
+    },
+    {
+      "id": "10955fe4-1ec8-48ca-8004-0457092ca14d",
+      "category": "Rules",
+      "front": "Rule 26: PERMISSION TO PURCHASE",
+      "back": "Employees shall not, without permission, purchase directly, any supplies or equipment which should be obtained on requisition."
+    },
+    {
+      "id": "c589b6cf-7610-4277-a654-ad0a60ea0414",
+      "category": "Rules",
+      "front": "Rule 27: NON-STANDARD EQUIPMENT",
+      "back": "No employee shall except from agents or others, non-standard equipment, tools or materials for trial or demonstration."
+    },
+    {
+      "id": "3fa9d1a0-b5d7-4e2b-b5c3-e2474254b010",
+      "category": "Rules",
+      "front": "Rule 28: LOAN BADGES",
+      "back": "Employees are not permitted to loan badges, books, tools or property of the company."
+    },
+    {
+      "id": "11971436-d9d7-4a49-a626-dff5926fca31",
+      "category": "Rules",
+      "front": "Rule 29: ASSIGN WAGES",
+      "back": "Employees may not assign their wages or otherwise involve the company in their personal affairs."
+    },
+    {
+      "id": "e737a62e-3164-4ce0-a498-66993a64b374",
+      "category": "Rules",
+      "front": "Rule 30: DAMAGE",
+      "back": "Employees shall report promptly and in accordance with instructions, any accidental damage they may have caused or which has come to their attention."
+    },
+    {
+      "id": "7c79a168-d88f-4573-b3f8-32f5c34459c9",
+      "category": "Rules",
+      "front": "Rule 31: TRIM",
+      "back": "Permission to work on private property or to trim or cut trees on the highway or elsewhere should be obtained before such work is started."
+    },
+    {
+      "id": "4",
+      "category": "PPE",
+      "front": "What does a Class 2 Type 1 Rubber Glove tag look like?",
+      "back": "Yellow Tag, embossed with an 'F'."
+    },
+    {
+      "id": "5",
+      "category": "PPE",
+      "front": "What voltages do Class 2 Type 1 (Type F) protect against?",
+      "back": "34,500 Volts AC phase to phase / 20,000 Volts AC phase to ground."
+    },
+    {
+      "id": "6",
+      "category": "PPE",
+      "front": "What are the 5 tests for Rubber Gloves?",
+      "back": "1. Date, 2. Stretch, 3. Finger roll, 4. Resiliency, 5. Air tightness."
+    },
+    {
+      "id": "7",
+      "category": "Equipment",
+      "front": "188A Voltage Detector Ranges?",
+      "back": "DC: 6 to 2,000v\nAC: 50 to 20,000v @60Hz."
+    },
+    {
+      "id": "8",
+      "category": "Equipment",
+      "front": "What does the GREEN LED mean on the 188A self test?",
+      "back": "It means the basic circuitry is working properly."
+    },
+    {
+      "id": "9",
+      "category": "Equipment",
+      "front": "What does the RED LED mean on the 188A during a test?",
+      "back": "Hazardous voltage is detected. DO NOT PROCEED."
+    },
+    {
+      "id": "10",
+      "category": "PPE",
+      "front": "What ANSI standard applies to Safety Glasses?",
+      "back": "ANSI Z87."
+    },
+    {
+      "id": "11",
+      "category": "PPE",
+      "front": "What ANSI standard applies to Boots?",
+      "back": "ANSI Z41 (Impacts up to 75 lbs, crushing force of 2500 lbs)."
+    },
+    {
+      "id": "12",
+      "category": "PPE",
+      "front": "What are the specs for a Hard Hat?",
+      "back": "Type I Class E, ANSI 89.1. Protects against 20,000 v (incidental contact). Replace every 5 years."
+    },
+    {
+      "id": "13",
+      "category": "Hazardous Gases",
+      "front": "What are the gases listed under the acronym `Pagan hammer bc`?",
+      "back": "Propane, Acetelyne, Gasoline, Alcohol, Natural gas, Hydrogen, Ammonia, Mapp gas, Methane, Ethelene, Refrigerants, Butane, Carbon Monoxide."
+    },
+    {
+      "id": "16",
+      "category": "Quality",
+      "front": "What are the 8 Steps of Quality? (Hint: BCCDOSST)",
+      "back": "1. Bond, 2. Conductors, 3. Close, 4. Drip collar, 5. Openings, 6. Support conductors, 7. Support cable, 8. Tape ends/nozzle."
+    },
+    {
+      "id": "17",
+      "category": "Vault Safety",
+      "front": "List some elements of Vault Safety.",
+      "back": "Tip Splice, No Spark Phone, RDA III A, Glow in dark arrows, Reverse thread light bulb, Key from CO tech, 2 Fire Extinguishers (water and Halon for electric)."
+    },
+    {
+      "id": "18",
+      "category": "Basic Electricity",
+      "front": "What is OHM's Law?",
+      "back": "The relationship between voltage, current and resistance in a circuit. It takes 1 volt to push 1 amp through 1 ohm of resistance."
+    },
+    {
+      "id": "19",
+      "category": "Basic Electricity",
+      "front": "What is Capacitance?",
+      "back": "The ability of a conductor to hold a charge. It has high resistance to DC, and low resistance to AC."
+    },
+    {
+      "id": "20",
+      "category": "Equipment",
+      "front": "What are the 5 types of Grounding?",
+      "back": "1. Power Co. MGN, 2. Conductor from MGN, 3. Metallic threaded pipe, 4. Electric meter, 5. Ground rod."
+    },
+    {
+      "id": "21",
+      "category": "Equipment",
+      "front": "Drop Clearance minimums for Railroad and Pool?",
+      "back": "Railroad is 27. Pool is 22."
+    },
+    {
+      "id": "22",
+      "category": "Equipment",
+      "front": "What does a Black coil indicate?",
+      "back": "Standard protection"
+    },
+    {
+      "id": "23",
+      "category": "Equipment",
+      "front": "What is D Encapsulant used for?",
+      "back": "Buried and fiber."
+    },
+    {
+      "id": "24",
+      "category": "Equipment",
+      "front": "What is pipe tight used for?",
+      "back": "Pipe tight is used for sealing, but NOT on regulators."
+    },
+    {
+      "id": "25",
+      "category": "FioS Cheat Sheet",
+      "front": "What does an RF power of -20dBmV or greater indicate?",
+      "back": "No RF signal."
+    },
+    {
+      "id": "26",
+      "category": "Basic Electricity",
+      "front": "What does an Inductor do?",
+      "back": "Preserves current by storing energy in a magnetic field (ex. Load Coil). Load coils increase inductance."
+    },
+    {
+      "id": "27",
+      "category": "Drop Wire",
+      "front": "What is the Drop Wire horizontal and vertical clearance from power at a house attachment?",
+      "back": "Horizontal: 40 inches. Vertical: 18 inches."
+    },
+    {
+      "id": "28",
+      "category": "Litespan 2000",
+      "front": "What is the Litespan 2000?",
+      "back": "A Multiplexer. It is a SONET-based system."
+    },
+    {
+      "id": "29",
+      "category": "Loading",
+      "front": "What is the purpose of Loading?",
+      "back": "To increase loop resistance and bring the pair back into phase."
+    },
+    {
+      "id": "30",
+      "category": "Loading",
+      "front": "What frequencies do Load Coils block?",
+      "back": "Frequencies between 3,400 Hz and 4,200 Hz."
+    },
+    {
+      "id": "31",
+      "category": "Manhole Safety",
+      "front": "If you see a rainbow on the water near or in a manhole, what should you assume?",
+      "back": "Assume gasoline. There is no need to test if you smell it."
+    },
+    {
+      "id": "32",
+      "category": "Manhole Safety",
+      "front": "How do you test a Dry manhole hole with an explosimeter?",
+      "back": "Put the sampling hose at head level, use 8 squeezes minimum."
+    },
+    {
+      "id": "33",
+      "category": "Air Pressure",
+      "front": "What are the minimum Air Pressure PSI guidelines for cables?",
+      "back": "Aerial: 2 psi\nBuried: 3 psi\nUnderground: 5 psi\nSubmarine: 6 psi\nEnd pipe: 7 psi"
+    },
+    {
+      "id": "34",
+      "category": "Safety Sins",
+      "front": "What are the 7 Deadly Sins (Plus the unofficial 8th)?",
+      "back": "1. Working aloft without hard hat.\n2. Working aloft without 188A testing.\n3. Bucket without lanyard/chocks.\n4. Ladder without safety straps.\n5. Manhole without blower or RDA III.\n6. Working without safety glasses.\n7. No seatbelt.\n*8. Using cell phone while driving."
+    },
+    {
+      "id": "35",
+      "category": "Protection",
+      "front": "List forms of Mechanical Protection.",
+      "back": "Sealed closures, Encapsulated splices, Jell filled cable, Air pressure, Plant separation (Conduit, inner duct, inner dam, U guard, tree guard)."
+    },
+    {
+      "id": "36",
+      "category": "Protection",
+      "front": "List forms of Electrical Protection.",
+      "back": "Bonding, Grounding, Ground rods, IJ's, Choke splices, Coils, Carbons, Fuses, Fusible links, Minimum approach distances."
+    },
+    {
+      "id": "37",
+      "category": "RDA Monitoring",
+      "front": "What is the accuracy and response time of the RDA IIIA?",
+      "back": "Accuracy within 5% of calibrated level. Response time of 10 seconds at 10% of Lowest Explosive Level."
+    },
+    {
+      "id": "38",
+      "category": "RDA Calibration",
+      "front": "What gas is used for Daily Calibration of the RDA 3A?",
+      "back": "5000 PPM (.5%) Methane gas from a GREEN cylinder. NEVER USE C GAS."
+    },
+    {
+      "id": "39",
+      "category": "RDA Operation",
+      "front": "What happens if the Remote Sensing Unit (RSU) gets soaked or submerged?",
+      "back": "It will damage or render the gas sensor inoperable."
+    },
+    {
+      "id": "40",
+      "category": "Rubber Gloves",
+      "front": "What is the order of the Rubber Gloves 'Spiel' expected at the exam?",
+      "back": "1. Bag, 2. Cotton Liners, 3. Leather Gloves, 4. Rubber Gloves."
+    },
+    {
+      "id": "41",
+      "category": "Rubber Gloves",
+      "front": "What does the Rib at the gauntlet of a rubber glove do?",
+      "back": "It is the Flash Over Dam preventing rain or moisture from creating a pathway for possible electrocution."
+    },
+    {
+      "id": "42",
+      "category": "PPE",
+      "front": "What are the 5 tests for a Hard Hat?",
+      "back": "1. Resiliency (Bend Brim)\n2. Visual (cracks, cuts)\n3. Harness (1.5 inch clearance)\n4. Fit (Should not fall off)\n5. Date (5 years once put into service)"
+    },
+    {
+      "id": "43",
+      "category": "Equipment",
+      "front": "What is Repeater type 809?",
+      "back": "Gas tube protected, 12T1S - 239."
+    },
+    {
+      "id": "44",
+      "category": "SLC 96",
+      "front": "In an SLC 96 system, what does the TAU (Time Assignment Unit) do in Mode 2?",
+      "back": "Assigns Priority to calls and keeps a log of blocked calls. Mode 2 uses 48 dial tones for 96 customers."
+    },
+    {
+      "id": "45",
+      "category": "SLC 96",
+      "front": "What does Mode 3 of SLC 96 utilize?",
+      "back": "It utilizes an MXU (Multiplexer Unit). It has 48 circuits and can have a DT PayPhone Line."
+    },
+    {
+      "id": "46",
+      "category": "Tapes",
+      "front": "Why is Friction Tape not used in underground wraps?",
+      "back": "Because it is gasoline soluble. It is used as a final aerial wrap."
+    },
+    {
+      "id": "47",
+      "category": "Solders",
+      "front": "What is Sterine Core solder used for?",
+      "back": "It is used for wiping lead to lead, and is also used to check serrations on long nose pliers."
+    },
+    {
+      "id": "48",
+      "category": "Terminals",
+      "front": "On a 300 TYPE block, how does the 50 pair block count work?",
+      "back": "Counts Top to Bottom. Odd on the left, Even on the right. Cross wired on the right, test contacts on the left."
+    },
+    {
+      "id": "49",
+      "category": "Test Sets",
+      "front": "What does a Sidekick test set's Leakage Test do?",
+      "back": "It uses 135 VDC to punch through the oxide layer of a fault on a dry pair."
+    },
+    {
+      "id": "50",
+      "category": "Test Sets",
+      "front": "What does the Shortstop test set use?",
+      "back": "It uses TDR (Time Domain Reflectometry) with a range of 2000-2500 feet."
+    },
+    {
+      "id": "51",
+      "category": "Air Pressure",
+      "front": "How much water will 1 PSI keep out?",
+      "back": "1 PSI will keep out 2 feet of water."
+    },
+    {
+      "id": "52",
+      "category": "Air Pressure",
+      "front": "What system monitors the remote Manhole pressure transducers?",
+      "back": "The Sparta System monitors the transducers placed out in the manholes."
+    },
+    {
+      "id": "53",
+      "category": "Work Area Protection",
+      "front": "What is the rule for placing signs regarding speed limits 35MPH and over?",
+      "back": "Place sign 10 times the speed limit back. For example, 35 MPH = sign should be 350 feet back."
+    },
+    {
+      "id": "54",
+      "category": "Work Area Protection",
+      "front": "Can you use your truck as a shield?",
+      "back": "No, do not use your truck as a shield. Park beyond the manhole, in the same direction as traffic."
+    },
+    {
+      "id": "55",
+      "category": "Electrolysis",
+      "front": "What is Electrolysis in cables and how is it fought?",
+      "back": "Electrolysis is stray DC current traveling along the lead sheath, decaying it. It is fought using Bonding/Grounding, Magnesium Strips, IJ's, and Anodes."
+    },
+    {
+      "id": "56",
+      "category": "Terminals",
+      "front": "What is unique about the 134A1A Protected Interior Terminal?",
+      "back": "It is carbon protected, and there is NO loss of dial tone (dt) when the fuse is pulled, unlike the 190."
+    },
+    {
+      "id": "57",
+      "category": "Closures",
+      "front": "What is a Trac Closure?",
+      "back": "A toolless reenterable aerial closure."
+    },
+    {
+      "id": "58",
+      "category": "SLC 96",
+      "front": "What is the function of the LSU (Line Switch Unit)?",
+      "back": "It directs automatic switching to a shared protection line during a failure."
+    },
+    {
+      "id": "59",
+      "category": "SLC 96",
+      "front": "What does the SSU (Special Service Unit) do?",
+      "back": "Provides delayed processing signal for PBX trunks, synchronizes timing on circuits, and quiets channel noise."
+    },
+    {
+      "id": "60",
+      "category": "SLC 96",
+      "front": "What occurs if the PU (Power Unit) shuts down?",
+      "back": "It must be removed for 5 seconds and reseated."
+    },
+    {
+      "id": "61",
+      "category": "SLC 96",
+      "front": "What is the TRU (Transmit / Receive Unit) responsible for?",
+      "back": "It encodes channel sampling to PCM on transmit, and decodes/demultiplexes the PCM signal on receive."
+    },
+    {
+      "id": "62",
+      "category": "Litespan 2000",
+      "front": "What does a complete Litespan 2000 system at the Central Office control?",
+      "back": "It controls 5 remote terminals (3 east, 2 west) for a total of 10,080 pots lines."
+    },
+    {
+      "id": "63",
+      "category": "Hardware",
+      "front": "What is the maximum Ground Wire length for an ONT and a NI (Network Interface)?",
+      "back": "150 feet maximum for a Fiber ONT. 20 feet maximum for a copper NI."
+    },
+    {
+      "id": "64",
+      "category": "Hardware",
+      "front": "What is the RJ45 jack?",
+      "back": "It is an 8-position, 8-contact jack, utilized with 9 resistors."
+    },
+    {
+      "id": "65",
+      "category": "Fiber",
+      "front": "What is the difference between Single-Mode and Multi-Mode fiber?",
+      "back": "Single-Mode has a smaller core for less light loss, used for high-speed data, and has YELLOW markings. Multi-Mode has ORANGE markings and is of lesser quality (should not be used anymore)."
+    },
+    {
+      "id": "66",
+      "category": "Fiber",
+      "front": "What are the characteristics of a Fiber Ribbon Cable?",
+      "back": "It contains 6, 12, or 24 fibers. 12 fibers per tube, and 12 tubes per sheath."
+    },
+    {
+      "id": "67",
+      "category": "Fiber Networks",
+      "front": "What are the specs of GPON vs BPON?",
+      "back": "GPON (Gigabit Passive Optical Network) transfers up to 300Gb using TDMA. BPON transfers up to 100Gb."
+    },
+    {
+      "id": "68",
+      "category": "Fiber Data",
+      "front": "Explain the downstream, upstream, and video nanometer (nm) waves in an optical network.",
+      "back": "1490nm = downstream data (2.488 Gbits)\n1310nm = upstream data (1.244 Gbits)\n1550nm = video."
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "q1",
+      "question": "During the testing of the voltage detector, the black conductive end cap can be left on the probe tip.",
+      "type": "true_false",
+      "answer": "False"
+    },
+    {
+      "id": "q2",
+      "question": "A false hazardous voltage reading can be caused by static discharge.",
+      "type": "true_false",
+      "answer": "True"
+    },
+    {
+      "id": "q3",
+      "question": "Anything that is in your work space and has the potential to be energized must be tested.",
+      "type": "true_false",
+      "answer": "True"
+    },
+    {
+      "id": "q4",
+      "question": "Performing a self test on the 188A must be done before testing for hazardous voltage.",
+      "type": "true_false",
+      "answer": "True"
+    }
+  ],
+  "fillInTheBlanks": [
+    {
+      "id": "f1",
+      "text": "Rubber gloves come as a pair, leave as a pair. They are tested upon receipt, before and after each use, weekly and monthly on a [?] card.",
+      "answer": "6A"
+    },
+    {
+      "id": "f2",
+      "text": "To test air tightness for rubber gloves, this test is done [?] to detect possible damage during testing.",
+      "answer": "last"
+    },
+    {
+      "id": "f3",
+      "text": "WAP specifies that for 35 mph and over, place [?] times-sign. For 30 mph and under, place [?] times-sign.",
+      "answer": "10, 7"
+    },
+    {
+      "id": "f4",
+      "text": "The 188A uses a battery model #[?], eveready for proper fit.",
+      "answer": "522A"
+    },
+    {
+      "id": "f5",
+      "text": "Ohm's law states it takes 1 volt to push 1 [?] through 1 ohm of resistance.",
+      "answer": "amp"
+    },
+    {
+      "id": "f6",
+      "text": "For drop clearance, the minimum height for a railroad is [?].",
+      "answer": "27"
+    },
+    {
+      "id": "f7",
+      "text": "In Vault Safety, you need 2 fire extinguishers, containing Water and [?] (for electric).",
+      "answer": "Halon"
+    },
+    {
+      "id": "f8",
+      "text": "A [?] digit alpha-numeric system sets the standards by which we perform operations in BSP.",
+      "answer": "nine"
+    },
+    {
+      "id": "f9",
+      "text": "Before placing J Hooks, ensure they are placed [?] inches above strand to the house, or [?] inches below strand.",
+      "answer": "4, 6"
+    },
+    {
+      "id": "f10",
+      "text": "When checking a Wet manhole for hazardous gases, you should take a reading [?] above the water with 8 squeezes minimum.",
+      "answer": "1' ft"
+    },
+    {
+      "id": "f11",
+      "text": "In the Litespan 2000 multiplexer, a channel bank consists of 56 cards which equals [?] POTS lines.",
+      "answer": "224"
+    },
+    {
+      "id": "f12",
+      "text": "A load coil blocks frequencies between [?] and [?] Hz.",
+      "answer": "3400, 4200"
+    },
+    {
+      "id": "f13",
+      "text": "For Daily Calibration of the RDA 3A, you must NEVER use [?] gas to test or calibrate.",
+      "answer": "C"
+    },
+    {
+      "id": "f14",
+      "text": "The Hard Hat standard is ANSI [?] and is rated Type 1 Class E for 20,000 V AC incidental contact.",
+      "answer": "Z89.1"
+    },
+    {
+      "id": "f15",
+      "text": "In the Rubber Gloves exam spiel, you inspect the bag and note there is a square cut out of the bottom of the plastic liner to allow [?] to drip out.",
+      "answer": "moisture"
+    },
+    {
+      "id": "f16",
+      "text": "Load case 662 is rated at 88 [?].",
+      "answer": "milihenry"
+    },
+    {
+      "id": "f17",
+      "text": "In the SLC 96 Mode 1, the DLU or Data Link Unit acts as the [?] of the system.",
+      "answer": "brains"
+    },
+    {
+      "id": "f18",
+      "text": "For test set work codes, 112 is pole to building, while [?] is Manhole (MH) to building.",
+      "answer": "212"
+    },
+    {
+      "id": "f19",
+      "text": "The Parkway 276 test set contains a tone generator, an ohm meter, and a [?] line.",
+      "answer": "talk"
+    },
+    {
+      "id": "f20",
+      "text": "Rosin Core solder is used in Central Offices for cross wiring and soldering to [?].",
+      "answer": "copper"
+    },
+    {
+      "id": "f21",
+      "text": "For speed limits 30 MPH and under, you place the Men Working sign [?] times the speed limit back.",
+      "answer": "7"
+    },
+    {
+      "id": "f22",
+      "text": "To fight electrolysis, you can use [?] strips because sheaths give electrolysis something to eat besides lead.",
+      "answer": "magnesium"
+    },
+    {
+      "id": "f23",
+      "text": "The [?] is used in place of the LSU in an SLC-96 when it is fed by fiber.",
+      "answer": "ASU"
+    },
+    {
+      "id": "f24",
+      "text": "The 3M encapsulated closure is considered the [?] buried closure compared to the 16 Type.",
+      "answer": "better"
+    },
+    {
+      "id": "f25",
+      "text": "For fiber optic cables, the Single Mode sheaths are marked with the color [?].",
+      "answer": "yellow"
+    },
+    {
+      "id": "f26",
+      "text": "The OLT grants time slots to ONTs every 125 [?] in a TDMA network.",
+      "answer": "microsec"
+    },
+    {
+      "id": "f27",
+      "text": "ADSL (Asymmetrical DSL) adapts by shifting the rate in the pipe to allow higher [?] speeds when little upload is being used.",
+      "answer": "download"
+    },
+    {
+      "id": "f28",
+      "text": "When assessing a pole to climb, a symbol indicating a [?] means the pole is condemned and to be replaced.",
+      "answer": "square with an X"
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "d1",
+      "title": "Safety Gear Checklist",
+      "filename": "safety_gear.pdf",
+      "description": "Hand-drawn breakdown of Class 3 Vests, Hard Hat ANSI testing, and safety boots."
+    },
+    {
+      "id": "d2",
+      "title": "Vault Air Pressure Schematics",
+      "filename": "vault.pdf",
+      "description": "Full structural diagram of the Air Compressor, Condenser, and Manhole Sparta transducers."
+    },
+    {
+      "id": "d3",
+      "title": "SLC-96 Multiplexer (Mode 1)",
+      "filename": "slc_96_mode1.pdf",
+      "description": "Matrix mapping of the ACU, DLU (Brains), and TRU card slots."
+    },
+    {
+      "id": "d4",
+      "title": "RDA IIIA Monitoring System",
+      "filename": "rda_monitoring_system.pdf",
+      "description": "Visual layout of the Central Monitoring Unit and the Remote Sensing Unit."
+    },
+    {
+      "id": "d5",
+      "title": "300 Type Back Bay Block",
+      "filename": "terminals.pdf",
+      "description": "Photographic reference of the 50-pair block terminal mapping."
+    }
+  ],
+  "acronyms": [
+    {
+      "id": "a1",
+      "title": "8 Steps of Quality (BCCDOSST)",
+      "words": [
+        "Bond",
+        "Conductors",
+        "Close",
+        "Drip Collar",
+        "Openings",
+        "Support Conductors",
+        "Support Cable",
+        "Tape ends"
+      ]
+    },
+    {
+      "id": "a2",
+      "title": "Hazardous Gases (PAGAN HAMMER BC)",
+      "words": [
+        "Propane",
+        "Acetylene",
+        "Gasoline",
+        "Alcohol",
+        "Natural Gas",
+        "Hydrogen",
+        "Ammonia",
+        "Methane",
+        "Mapp Gas",
+        "Ethylene",
+        "Refrigerants",
+        "Butane",
+        "Carbon Monoxide"
+      ]
+    },
+    {
+      "id": "a3",
+      "title": "Rubber Glove Exam Spiel",
+      "words": [
+        "Bag",
+        "Cotton Liners",
+        "Leather Gloves",
+        "Rubber Gloves"
+      ]
+    },
+    {
+      "id": "a4",
+      "title": "Rubber Glove 5 Tests",
+      "words": [
+        "Date",
+        "Stretch",
+        "Resiliency",
+        "Finger Roll",
+        "Air Tightness"
+      ]
+    }
+  ]
+};
